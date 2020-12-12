@@ -4,11 +4,11 @@ import ua.edu.ucu.function.*;
 
 public interface IntStream {
 
-    Double average();
+    Double average() throws IllegalAccessException;
 
-    Integer max();
+    Integer max()  throws IllegalAccessException;
 
-    Integer min();
+    Integer min()  throws IllegalAccessException;
     
     IntStream flatMap(IntToIntStreamFunction func);
 
@@ -22,7 +22,7 @@ public interface IntStream {
 
     int reduce(int identity, IntBinaryOperator op);
 
-    Integer sum();
+    Integer sum() throws IllegalAccessException ;
 
     int[] toArray();
 }
